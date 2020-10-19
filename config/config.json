@@ -1,0 +1,33 @@
+{
+    "version": "0.0.1",
+    "configuration":
+    {
+        "logger":
+        {
+            "level":"INFO"
+        },
+        "database":
+        {
+            "cleaning_interval": "15 min",
+            "request_history_age": "50 min",
+            "last_cleaning_records": 10
+        },
+        "sources":
+        [
+            {
+                "enable": true,
+                "type":"gismeteo-2week",
+                "url":"https://www.gismeteo.ru/weather-novosibirsk-4690/2-weeks/",
+                "request_interval":"12 min",
+                "table_name": "gismeteo_novosib"
+            },
+            {
+                "enable": true,
+                "type":"gismeteo-2week",
+                "url":"https://www.gismeteo.ru/weather-tomsk-4652/2-weeks/",
+                "request_interval":"5 min",
+                "table_name": "gismeteo_tomsk"
+            }
+        ]
+    }
+}

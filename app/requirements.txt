@@ -1,0 +1,8 @@
+aiohttp==3.5.4
+aiosqlite3==0.3.0
+beautifulsoup4==4.9.3
+future==0.15.2
+lxml==3.8.0
+pytimeparse==1.1.8
+typing_extensions==3.6.6
+typing==3.6.6

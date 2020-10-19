@@ -1,0 +1,12 @@
+[Unit]
+Description=siteinfo service
+
+[Service]
+ExecStart=${CPACK_PACKAGING_INSTALL_PREFIX}/env/bin/python run.py
+
+# Restart the service on non-zero exit code when terminated by a signal other than SIGHUP, SIGINT, SIGTERM or SIGPIPE
+Restart=on-failure
+WorkingDirectory=${CPACK_PACKAGING_INSTALL_PREFIX}
+
+[Install]
+WantedBy=multi-user.target
